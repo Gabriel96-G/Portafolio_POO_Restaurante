@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portafolio POO | Sabores de Heredia</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f8fa;
+            color: #10283f;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #10283f;
+            color: white;
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            color: #bce8f0;
+        }
+
+        nav {
+            background: #16697e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            background: white;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #13788a;
+        }
+
+        h3 {
+            color: #10283f;
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(220px, 1fr)
+            );
+            gap: 15px;
+        }
+
+        .tarjeta {
+            border: 1px solid #d7e5eb;
+            background: #f9fcfd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .paso {
+            border-left: 4px solid #c77135;
+            padding: 12px;
+            margin: 15px 0;
+            background: #fff8eb;
+        }
+
+        .resultado {
+            background: #eaf5f8;
+            border: 1px solid #b9dce5;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        pre {
+            background: #173349;
+            color: white;
+            padding: 20px;
+            overflow-x: auto;
+            border-radius: 8px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #10283f;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                margin: 15px;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 29px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+
+<header>
+    <h1>Sabores de Heredia</h1>
+
+    <h2>Sistema de Gestión de Pedidos</h2>
+
+    <p>
+        Primer Avance del Portafolio de Evidencias
+        de Programación Orientada a Objetos
+    </p>
+
+    <p>Universidad CENFOTEC</p>
+
+    <p>Estudiante: Alejandro Medrano Ruiz</p>
+</header>
+
+
+<!-- MENÚ DE NAVEGACIÓN -->
+
+<nav>
+    <a href="#sistema">Sistema</a>
+    <a href="#justificacion">Justificación</a>
+    <a href="#conceptos">Conceptos POO</a>
+    <a href="#uml">UML</a>
+    <a href="#funcionamiento">Funcionamiento</a>
+    <a href="#tecnico">Implementación</a>
+    <a href="#codigo">Código</a>
+    <a href="#repositorio">GitHub</a>
+</nav>
+
+
+<!-- SECCIÓN 1: DESCRIPCIÓN DEL SISTEMA -->
+
+<section id="sistema">
+
+    <h2>1. Descripción del sistema</h2>
+
+    <p>
+        Sabores de Heredia es un sistema didáctico
+        desarrollado para organizar los pedidos
+        de un restaurante mediante los principios
+        de Programación Orientada a Objetos.
+    </p>
+
+    <p>
+        El sistema permite registrar productos,
+        administrar mesas, crear pedidos,
+        calcular totales y mostrar recibos.
+    </p>
+
+    <p>
+        Su implementación utiliza clases Java
+        que representan entidades del mundo real,
+        con atributos, métodos y relaciones.
+    </p>
+
+    <div class="contenedor">
+
+        <div class="tarjeta">
+            <h3>Productos</h3>
+
+            <p>
+                Cada producto contiene un código,
+                un nombre y un precio.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Mesas</h3>
+
+            <p>
+                Permite identificar las mesas
+                del restaurante y consultar
+                su estado de ocupación.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Pedidos</h3>
+
+            <p>
+                Los pedidos contienen productos
+                y cantidades solicitadas
+                por los clientes.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Recibos</h3>
+
+            <p>
+                El sistema muestra un resumen
+                del pedido y su importe total.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SECCIÓN 2: JUSTIFICACIÓN -->
+
+<section id="justificacion">
+
+    <h2>2. Justificación del proyecto</h2>
+
+    <p>
+        Se seleccionó un sistema de gestión
+        de pedidos para restaurante porque
+        representa una situación cotidiana
+        que puede modelarse mediante
+        Programación Orientada a Objetos.
+    </p>
+
+    <p>
+        En un restaurante es necesario
+        identificar productos, registrar
+        pedidos, administrar mesas y
+        calcular los importes correspondientes.
+    </p>
+
+    <p>
+        Estas operaciones permiten reconocer
+        entidades con características
+        y comportamientos propios.
+    </p>
+
+    <p>
+        La elección también permite aplicar
+        conocimientos adquiridos en
+        Programación 2 y Programación
+        Orientada a Objetos, especialmente
+        clases, objetos, constructores,
+        atributos privados, métodos públicos,
+        arreglos y relaciones entre objetos.
+    </p>
+
+    <h3>Objetivo del sistema</h3>
+
+    <p>
+        Desarrollar una solución básica
+        de gestión de pedidos utilizando
+        los principios de abstracción,
+        encapsulamiento y relaciones
+        entre objetos.
+    </p>
+
+</section>
+
+
+<!-- SECCIÓN 3: CONCEPTOS POO -->
+
+<section id="conceptos">
+
+    <h2>3. Principios de Programación Orientada a Objetos</h2>
+
+    <div class="contenedor">
+
+        <div class="tarjeta">
+
+            <h3>Abstracción</h3>
+
+            <p>
+                Cada clase representa solamente
+                los atributos y comportamientos
+                necesarios para el sistema.
+            </p>
+
+            <p>
+                Ejemplo: Producto contiene
+                código, nombre y precio.
+            </p>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <h3>Encapsulamiento</h3>
+
+            <p>
+                Los atributos se declaran
+                privados y se utilizan
+                métodos públicos para
+                controlar su acceso.
+            </p>
+
+            <p>
+                Ejemplo: getPrecio()
+                y setPrecio().
+            </p>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <h3>Modularidad</h3>
+
+            <p>
+                El sistema divide sus
+                responsabilidades entre
+                distintas clases Java.
+            </p>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <h3>Agregación</h3>
+
+            <p>
+                Restaurante registra objetos
+                Producto, Mesa y Pedido
+                creados independientemente.
+            </p>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <h3>Composición</h3>
+
+            <p>
+                Pedido crea y administra
+                sus propios objetos
+                DetallePedido.
+            </p>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <h3>Dependencia</h3>
+
+            <p>
+                Restaurante utiliza
+                ImpresoraRecibos cuando
+                necesita mostrar un recibo.
+            </p>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <h3>Asociación</h3>
+
+            <p>
+                Pedido mantiene una referencia
+                a Mesa y DetallePedido
+                mantiene una referencia
+                a Producto.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SECCIÓN 4: DIAGRAMA UML -->
+
+<section id="uml">
+
+    <h2>4. Diagrama de clases UML</h2>
+
+    <p>
+        El diagrama UML representa la
+        estructura del sistema,
+        incluyendo sus clases,
+        atributos, métodos y relaciones.
+    </p>
+
+    <h3>Clases representadas</h3>
+
+    <p>
+        Restaurante, Producto, Mesa,
+        Pedido, DetallePedido
+        e ImpresoraRecibos.
+    </p>
+
+    <!-- IMAGEN EXPORTADA DESDE DRAW.IO -->
+
+    <img
+            src="uml/Diagrama_UML_Restaurante.drawio.png"
+            alt="Diagrama UML del sistema Sabores de Heredia"
+    >
+
+    <h3>Interpretación del diagrama</h3>
+
+    <p>
+        El rombo blanco representa
+        relaciones de agregación.
+    </p>
+
+    <p>
+        El rombo negro representa
+        la composición entre Pedido
+        y DetallePedido.
+    </p>
+
+    <p>
+        Las líneas discontinuas con flecha
+        representan dependencias entre clases.
+    </p>
+
+    <p>
+        Las líneas continuas representan
+        asociaciones entre objetos.
+    </p>
+
+    <p>
+        Los símbolos de acceso indican
+        encapsulamiento: el signo menos
+        identifica atributos privados
+        y el signo más identifica
+        métodos públicos.
+    </p>
+
+</section>
+
+
+<!-- SECCIÓN 5: FUNCIONAMIENTO -->
+
+<section id="funcionamiento">
+
+    <h2>5. Funcionamiento del sistema</h2>
+
+    <div class="paso">
+
+        <h3>Paso 1. Crear objetos</h3>
+
+        <p>
+            Se crean objetos Restaurante,
+            Producto y Mesa utilizando
+            sus respectivos constructores.
+        </p>
+
+    </div>
+
+    <div class="paso">
+
+        <h3>Paso 2. Registrar entidades</h3>
+
+        <p>
+            El restaurante registra
+            los productos y las mesas
+            dentro de sus arreglos.
+        </p>
+
+    </div>
+
+    <div class="paso">
+
+        <h3>Paso 3. Crear pedidos</h3>
+
+        <p>
+            Se crea un pedido asociado
+            con una mesa y se agregan
+            productos con sus cantidades.
+        </p>
+
+    </div>
+
+    <div class="paso">
+
+        <h3>Paso 4. Calcular el total</h3>
+
+        <p>
+            DetallePedido calcula
+            el subtotal de cada producto.
+            Pedido suma los subtotales
+            y obtiene el importe final.
+        </p>
+
+    </div>
+
+    <div class="paso">
+
+        <h3>Paso 5. Mostrar recibos</h3>
+
+        <p>
+            ImpresoraRecibos utiliza
+            la información de Pedido
+            para mostrar el resumen
+            en la consola.
+        </p>
+
+    </div>
+
+    <h3>Ejemplo de resultados</h3>
+
+    <div class="resultado">
+
+        <p>
+            <strong>Pedido 101:</strong>
+            2 hamburguesas y 1 jugo natural.
+        </p>
+
+        <p>
+            Hamburguesas: ₡7 000
+        </p>
+
+        <p>
+            Jugo natural: ₡1 200
+        </p>
+
+        <p>
+            <strong>Total: ₡8 200</strong>
+        </p>
+
+    </div>
+
+    <div class="resultado">
+
+        <p>
+            <strong>Pedido 102:</strong>
+            1 casado.
+        </p>
+
+        <p>
+            <strong>Total: ₡4 000</strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SECCIÓN 6: ASPECTOS TÉCNICOS -->
+
+<section id="tecnico">
+
+    <h2>6. Aspectos técnicos de la implementación</h2>
+
+    <h3>Lenguaje de programación</h3>
+
+    <p>
+        El sistema fue desarrollado en Java
+        utilizando IntelliJ IDEA.
+    </p>
+
+    <h3>Organización del proyecto</h3>
+
+    <p>
+        El proyecto contiene siete
+        archivos Java:
+    </p>
+
+    <ul>
+        <li>Main.java</li>
+        <li>Restaurante.java</li>
+        <li>Producto.java</li>
+        <li>Mesa.java</li>
+        <li>Pedido.java</li>
+        <li>DetallePedido.java</li>
+        <li>ImpresoraRecibos.java</li>
+    </ul>
+
+    <h3>Uso de arreglos</h3>
+
+    <p>
+        Restaurante utiliza arreglos
+        para registrar productos,
+        mesas y pedidos.
+    </p>
+
+    <p>
+        Pedido utiliza un arreglo
+        de objetos DetallePedido
+        para almacenar los productos
+        solicitados.
+    </p>
+
+    <h3>Constructores</h3>
+
+    <p>
+        Los constructores permiten
+        inicializar los atributos
+        de los objetos cuando
+        son creados.
+    </p>
+
+    <h3>Encapsulamiento</h3>
+
+    <p>
+        Los atributos privados
+        protegen la información
+        de las clases.
+    </p>
+
+    <p>
+        Los métodos públicos
+        permiten consultar o modificar
+        información bajo las condiciones
+        definidas en cada clase.
+    </p>
+
+    <h3>Validaciones</h3>
+
+    <p>
+        El programa utiliza condiciones
+        para verificar cantidades válidas,
+        referencias nulas y disponibilidad
+        de espacio en los arreglos.
+    </p>
+
+    <h3>Almacenamiento</h3>
+
+    <p>
+        Los datos se mantienen
+        temporalmente en memoria.
+        Esta versión no utiliza
+        bases de datos.
+    </p>
+
+    <h3>Herramientas utilizadas</h3>
+
+    <ul>
+        <li>Java</li>
+        <li>IntelliJ IDEA</li>
+        <li>Draw.io para el UML</li>
+        <li>Git y GitHub</li>
+        <li>HTML y CSS</li>
+    </ul>
+
+</section>
+
+
+<!-- SECCIÓN 7: EJEMPLOS DE CÓDIGO -->
+
+<section id="codigo">
+
+    <h2>7. Ejemplos de implementación</h2>
+
+    <h3>7.1 Encapsulamiento</h3>
+
+    <p>
+        El atributo precio es privado
+        y su modificación se controla
+        mediante un setter.
+    </p>
+
+    <pre><code>private double precio;
+
+public void setPrecio(double precio) {
+    if (precio >= 0) {
+        this.precio = precio;
+    }
+}</code></pre>
+
+    <h3>7.2 Agregación</h3>
+
+    <p>
+        Restaurante registra un objeto
+        Producto que fue creado
+        independientemente.
+    </p>
+
+    <pre><code>productos[cantidadProductos] = producto;
+
+cantidadProductos++;</code></pre>
+
+    <h3>7.3 Composición</h3>
+
+    <p>
+        Pedido crea internamente
+        sus objetos DetallePedido.
+    </p>
+
+    <pre><code>detalles[cantidadDetalles] =
+    new DetallePedido(producto, cantidad);
+
+cantidadDetalles++;</code></pre>
+
+    <h3>7.4 Dependencia</h3>
+
+    <p>
+        Restaurante utiliza
+        ImpresoraRecibos como parámetro
+        para imprimir un pedido.
+    </p>
+
+    <pre><code>public void imprimirRecibo(
+        Pedido pedido,
+        ImpresoraRecibos impresora) {
+
+    if (impresora != null) {
+        impresora.imprimirPedido(pedido);
+    }
+}</code></pre>
+
+    <h3>7.5 Cálculo del subtotal</h3>
+
+    <p>
+        DetallePedido calcula
+        el subtotal de un producto.
+    </p>
+
+    <pre><code>public double calcularSubtotal() {
+    return producto.getPrecio() * cantidad;
+}</code></pre>
+
+    <h3>7.6 Cálculo del total</h3>
+
+    <p>
+        Pedido suma los subtotales
+        de sus detalles registrados.
+    </p>
+
+    <pre><code>public double calcularTotal() {
+
+    double total = 0;
+
+    for (int i = 0; i &lt; cantidadDetalles; i++) {
+        total = total
+            + detalles[i].calcularSubtotal();
+    }
+
+    return total;
+}</code></pre>
+
+</section>
+
+
+<!-- SECCIÓN 8: REPOSITORIO -->
+
+<section id="repositorio">
+
+    <h2>8. Repositorio de GitHub</h2>
+
+    <p>
+        El código fuente del sistema
+        estará disponible en un
+        repositorio de GitHub.
+    </p>
+
+    <p>
+        El repositorio incluirá
+        las clases Java, el diagrama UML,
+        la documentación y el complemento
+        visual digital.
+    </p>
+
+    <p>
+        <strong>Enlace al repositorio:</strong>
+    </p>
+
+
+    <p>
+        <a href="https://github.com/Gabriel96-G/Portafolio_POO_Restaurante"
+           target="_blank"
+           rel="noopener noreferrer">
+            Ver repositorio del proyecto en GitHub
+        </a>
+    </p>
+
+
+</section>
+
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+
+    <p>
+        Universidad CENFOTEC
+    </p>
+
+    <p>
+        Primer Avance del Portafolio de Evidencias
+    </p>
+
+    <p>
+        Programación Orientada a Objetos
+    </p>
+
+    <p>
+        Sistema de Gestión de Pedidos
+        — Sabores de Heredia
+    </p>
+
+</footer>
+
+</body>
+</html>
