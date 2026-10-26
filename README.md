@@ -67,4 +67,4 @@ https://github.com/Gabriel96-G/Portafolio_POO_Restaurante
 
 ## Complemento visual
 
-Agregar aquí el enlace público exacto de GitHub Pages.
+https://gabriel96-g.github.io/Portafolio_POO_Restaurante/
